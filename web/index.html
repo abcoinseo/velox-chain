@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ABDB Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>ABDB Dashboard</h1>
+      <p>File-based Firebase-like API (Render Hosted)</p>
+    </header>
+
+    <section class="card">
+      <h2>1) Signup / Login</h2>
+      <div class="row">
+        <input id="username" placeholder="username (min 3 chars)" />
+        <button id="btnSignup">Signup</button>
+        <button id="btnLogin">Login</button>
+      </div>
+      <div class="small">
+        User Token: <code id="userToken">-</code>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2) Create Project</h2>
+      <div class="row">
+        <input id="projectName" placeholder="Project name" />
+        <button id="btnCreateProject">Create</button>
+      </div>
+      <div class="small">
+        Project API Key: <code id="apiKey">-</code>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3) Test Database</h2>
+      <p class="small">Example: create doc in collection <b>users</b></p>
+      <textarea id="docJson" rows="6">{ "name": "Abu", "age": 16 }</textarea>
+      <div class="row">
+        <button id="btnAddDoc">Add Doc</button>
+        <button id="btnGetDocs">Get Docs</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+
+    <footer class="small">
+      Open API base: <code id="baseUrl"></code> | Frontend: <code>/web</code>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
