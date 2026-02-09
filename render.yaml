@@ -1,8 +1,10 @@
 services:
   - type: web
-    name: velox-chain
-    env: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm run start
-    autoDeploy: true
+    name: velox-chain-rpc
+    runtime: docker
+    rootDir: edge
+    plan: standard
+    disk:
+      name: velox-chain-data
+      mountPath: /var/data
+      sizeGB: 50
